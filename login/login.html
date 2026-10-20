@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS — Sign In</title>
+        <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <main class="login-page">
+      <!-- ================= LEFT: BRAND / SHOWCASE ================= -->
+      <section class="welcome-section">
+        <header class="brand">
+          <div class="logo">NX</div>
+
+          <div class="brand-text">
+            <h2>NEXUS</h2>
+            <span>Betting Exchange</span>
+          </div>
+        </header>
+
+        <div class="welcome-content">
+          <div class="live-badge">
+            <span class="dot"></span>
+            1,284 Live Markets
+          </div>
+
+          <h1>
+            Own the <span class="grad">Game.</span><br />
+            Bet on <span class="grad">Nexus.</span>
+          </h1>
+
+          <p class="lead">
+            The sharpest odds in Africa. Instant M-Pesa payouts, live
+            in-play markets and zero drama — just wins.
+          </p>
+
+          <ul class="features">
+            <li>
+              <span class="check">✓</span>
+              <p>Best odds across 40+ sports &amp; 1,000+ markets</p>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <p>Instant deposits &amp; withdrawals via M-Pesa</p>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <p>Live cash-out on every in-play bet</p>
+            </li>
+          </ul>
+
+          <!-- Live odds preview card -->
+          <div class="odds-card">
+            <div class="odds-head">
+              <span class="live-pill">LIVE</span>
+              <span>Premier League</span>
+              <span class="odds-time">78'</span>
+            </div>
+
+            <div class="odds-match">
+              <span>Arsenal</span>
+              <strong>2 – 1</strong>
+              <span>Chelsea</span>
+            </div>
+
+            <div class="odds-btns">
+              <button type="button">1 <b>1.85</b></button>
+              <button type="button">X <b>3.40</b></button>
+              <button type="button">2 <b>4.20</b></button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="welcome-footer">
+          <span>© 2026 Nexus Betting</span>
+          <span class="age">18+</span>
+          <span>Play responsibly</span>
+        </footer>
+      </section>
+
+      <!-- ================= RIGHT: LOGIN FORM ================= -->
+      <section class="form-section">
+        <div class="login-container">
+          <div class="mobile-logo">
+            <div class="logo">NX</div>
+            <h2>NEXUS</h2>
+          </div>
+
+          <div class="heading">
+            <p class="eyebrow">Welcome back</p>
+            <h2>Sign in to <span class="grad">Nexus</span></h2>
+            <p class="sub">
+              Your odds are waiting. Log in to place your bets.
+            </p>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="email">Phone number or email</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="+254 7XX XXX XXX"
+                autocomplete="username"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <div class="password-label">
+                <label for="password">Password</label>
+                <a href="#">Forgot password?</a>
+              </div>
+
+              <div class="password-wrap">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-pass"
+                  aria-label="Show password"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1.5 12S5 5.5 12 5.5 22.5 12 22.5 12 19 18.5 12 18.5 1.5 12 1.5 12Z" />
+                    <circle cx="12" cy="12" r="3.2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="remember">
+              <label>
+                <input type="checkbox" name="remember" />
+                <span>Keep me signed in</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary">Sign in</button>
+          </form>
+
+          <div class="divider"><span>or continue with</span></div>
+
+          <div class="socials">
+            <button type="button" class="social">Google</button>
+            <button type="button" class="social">Apple</button>
+          </div>
+
+          <p class="signup">
+            New to Nexus? <a href="register.html">Create an account</a>
+          </p>
+
+          <a href="#" class="back-home">← Back to Home</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Tiny script for the show/hide password eye -->
+    <script>
+      const toggle = document.querySelector(".toggle-pass");
+      const pass = document.getElementById("password");
+
+      toggle.addEventListener("click", () => {
+        const show = pass.type === "password";
+        pass.type = show ? "text" : "password";
+        toggle.setAttribute("aria-label", show ? "Hide password" : "Show password");
+        toggle.classList.toggle("is-visible", show);
+      });
+    </script>
+  </body>
+</html>n
