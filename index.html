@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070910">
+    <meta
+      name="description"
+      content="NEXUS is a personal forex research and trading intelligence platform."
+    >
+    <title>NEXUS — Intelligence, in focus.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="experience" id="experience">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="NEXUS home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>NEXUS</span>
+        </a>
+        <span class="topbar-note"><span class="live-dot"></span> PERSONAL INTELLIGENCE SYSTEM</span>
+      </header>
+
+      <section class="scene scene--greeting is-active" id="greetingScene" aria-labelledby="greetingTitle">
+        <div class="greeting-orbit" aria-hidden="true">
+          <div class="orbit orbit--outer"></div>
+          <div class="orbit orbit--inner"></div>
+          <div class="core"><span></span></div>
+        </div>
+        <div class="greeting-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> NEXUS · ONLINE LOCALLY</p>
+          <h1 id="greetingTitle">Hi<span class="period">.</span></h1>
+          <p class="greeting-subtitle">A clearer view of the markets starts here.</p>
+        </div>
+
+        <div class="conversation" aria-live="polite" aria-atomic="true">
+          <p class="reply" id="nexusReply" hidden></p>
+        </div>
+
+        <form class="greeting-form" id="greetingForm">
+          <label class="sr-only" for="greetingInput">Say hi to NEXUS</label>
+          <input
+            id="greetingInput"
+            name="greeting"
+            type="text"
+            placeholder="Say hi to begin"
+            autocomplete="off"
+            maxlength="120"
+          >
+          <button class="mic-button" id="micButton" type="button" aria-label="Use voice input" title="Use voice input">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="9" y="3" width="6" height="12" rx="3"></rect>
+              <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3m-4 0h8"></path>
+            </svg>
+          </button>
+          <button class="send-button" type="submit" aria-label="Send greeting">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
+          </button>
+        </form>
+        <p class="input-hint" id="inputHint">TYPE A MESSAGE <span>·</span> VOICE INPUT WHEN SUPPORTED</p>
+      </section>
+
+      <section class="scene scene--initializing" id="initializationScene" aria-labelledby="initializationTitle" aria-hidden="true">
+        <div class="cinematic-backdrop" id="cinematicBackdrop">
+          <img
+            class="cinematic-image"
+            id="cinematicImage"
+            src="assets/nexus-cinematic-background.jpg"
+            alt=""
+            aria-hidden="true"
+          >
+          <div class="backdrop-wash" aria-hidden="true"></div>
+          <div class="light-trail light-trail--one" aria-hidden="true"></div>
+          <div class="light-trail light-trail--two" aria-hidden="true"></div>
+          <div class="image-missing" id="imageMissing" role="status" hidden>
+            <span class="missing-icon" aria-hidden="true">⌁</span>
+            <span class="mono">CINEMATIC IMAGE NOT FOUND</span>
+            <span>Add the selected image at <code>assets/nexus-cinematic-background.jpg</code></span>
+          </div>
+        </div>
+
+        <div class="initialization-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SYSTEM BOOT SEQUENCE</p>
+          <h2 id="initializationTitle">NEXUS <span>INITIALIZATION</span></h2>
+          <p class="initialization-intro">Checking what is available. Unverified services remain offline.</p>
+
+          <div class="status-panel" aria-label="System initialization status">
+            <div class="status-row" data-check="interface">
+              <span class="status-name"><span class="status-indicator"></span> Interface initialization</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+            <div class="status-row" data-check="backend">
+              <span class="status-name"><span class="status-indicator"></span> Backend availability</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+            <div class="status-row" data-check="market">
+              <span class="status-name"><span class="status-indicator"></span> Market data connection</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+            <div class="status-row" data-check="ai">
+              <span class="status-name"><span class="status-indicator"></span> AI provider availability</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+            <div class="status-row" data-check="intelligence">
+              <span class="status-name"><span class="status-indicator"></span> Intelligence engine</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+            <div class="status-row" data-check="risk">
+              <span class="status-name"><span class="status-indicator"></span> Risk Guardian</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+            <div class="status-row" data-check="trading">
+              <span class="status-name"><span class="status-indicator"></span> Trading engine</span>
+              <span class="status-value">CHECKING</span>
+            </div>
+          </div>
+          <p class="trading-notice"><span aria-hidden="true">◆</span> TRADING IS DISABLED · NO ORDERS CAN BE PLACED</p>
+        </div>
+      </section>
+
+      <section class="scene scene--entry" id="entryScene" aria-labelledby="entryTitle" aria-hidden="true">
+        <div class="entry-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO NEXUS</p>
+          <div class="entry-emblem" aria-hidden="true">
+            <span class="entry-emblem-ring"></span>
+            <span class="brand-mark brand-mark--large"><i></i><i></i><i></i></span>
+          </div>
+          <h2 id="entryTitle" tabindex="-1">Your next move<br>starts with <span>clarity.</span></h2>
+          <p class="entry-description">The welcome experience is ready. The NEXUS command centre is the next development stage.</p>
+          <div class="entry-status">
+            <span class="status-indicator status-indicator--muted"></span>
+            <span>COMMAND CENTRE <strong>DEVELOPMENT MODE</strong></span>
+          </div>
+          <p class="entry-footnote">Research first. Protect capital. Never mistake analysis for certainty.</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>INDEPENDENT RESEARCH · NO PROFIT PROMISES</span>
+        <span class="footer-coordinate">N <span>35° 41′ 22″</span> · E <span>139° 41′ 30″</span></span>
+      </footer>
+    </main>
+
+    <div class="screen-reader-status sr-only" id="screenReaderStatus" role="status" aria-live="polite"></div>
+  </body>
+</html>
